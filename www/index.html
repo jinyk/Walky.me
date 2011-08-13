@@ -48,17 +48,6 @@
         var loc_accuracy = 85.5;
         var loc_time = new Date();
 
-        var onSuccess = function(position) {
-            loc_lat = position.coords.latitude
-            loc_lng = position.coords.longitude
-            loc_accuracy = position.coords.accuracy
-            loc_time = new Date(position.timestamp)
-        }
-        function onError(error) {
-            alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
-        }
-
         function onBodyLoad() {
             document.addEventListener("deviceready",onDeviceReady,false);
         }
@@ -75,21 +64,55 @@
                 zoom: defaultMapZoom
             })
             places = $.getJSON('places.json', null, function(places) {
-                $.each(places, function(i, place) {
-                    new google.maps.Marker({
-                        position: new google.maps.LatLng(place.lat, place.lng),
-                        map: map
-                    })
-                    new google.maps.Marker({
-                        position: new google.maps.LatLng(place.lat, place.lng),
-                        map: directionsMap
-                    })
-                })
-            })
+               $.each(places, function(i, place) {
+                      new google.maps.Marker({
+                                             position: new google.maps.LatLng(place.lat, place.lng),
+                                             map: map
+                                             })
+                      new google.maps.Marker({
+                                             position: new google.maps.LatLng(place.lat, place.lng),
+                                             map: directionsMap
+                                             })
+                      })
+               })
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
         }
-        
+
+        var onSuccess = function(position) {
+            loc_lat = position.coords.latitude
+            loc_lng = position.coords.longitude
+            loc_accuracy = position.coords.accuracy
+            loc_time = new Date(position.timestamp)
+        }
+
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        }
+
+        function updateRoute(strOrigin, strDestination) {
+            if (strOrigin == 'Current Location')
+            origin = new google.maps.LatLng(loc_lat, loc_lng)
+            else
+            origin = strOrigin
+            
+            directionsRequest = {
+                origin: origin,
+                destination: strDestination,
+                travelMode: google.maps.TravelMode.WALKING
+            }
+            
+            directionsService.route(directionsRequest, function(result, status) {
+                                    if (status == google.maps.DirectionsStatus.OK) {
+                                    directionsDisplay.setDirections(result);
+                                    directionsMap.fitBounds(result.routes[0].bounds)
+                                    }
+                                    })
+            
+            directionsDisplay.setMap(directionsMap)
+        }
+
         function nearestWalkys() {
             navigator.geolocation.getCurrentPosition(onSuccess, onError)
             $.mobile.changePage("#nearest_walkys");
@@ -143,29 +166,5 @@
           </div>
       </div>
   </div>
-      
-  <script>
-    function updateRoute(strOrigin, strDestination) {
-        if (strOrigin == 'Current Location')
-            origin = new google.maps.LatLng(loc_lat, loc_lng)
-        else
-            origin = strOrigin
-            
-      directionsRequest = {
-        origin: origin,
-        destination: strDestination,
-        travelMode: google.maps.TravelMode.WALKING
-      }
-
-      directionsService.route(directionsRequest, function(result, status) {
-        if (status == google.maps.DirectionsStatus.OK) {
-          directionsDisplay.setDirections(result);
-          directionsMap.fitBounds(result.routes[0].bounds)
-        }
-      })
-      
-      directionsDisplay.setMap(directionsMap)
-    }
-    </script>
-  </body>
+</body>
 </html>
