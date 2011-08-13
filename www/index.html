@@ -52,6 +52,7 @@
             loc_lng = position.coords.longitude
             loc_accuracy = position.coords.accuracy
             loc_time = new Date(position.timestamp)
+            //recenter the map
         }
         function onError(error) {
             alert('code: '    + error.code    + '\n' +
@@ -63,14 +64,9 @@
         }
         
         function onDeviceReady() {
-            // do your thing!
-            //navigator.notification.alert("PhoneGap is working")
-            $('.location').click(function() {
-               navigator.geolocation.getCurrentPosition(onSuccess, onError)
-            })
             map = new google.maps.Map(document.getElementById("map_canvas"), {
                                       mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                      center: defaultMapCenter,
+                                      center: new google.maps.LatLng(loc_lat, loc_lng),
                                       zoom: defaultMapZoom
                                       })
             places = $.getJSON('places.json', null, function(places) {
@@ -83,29 +79,35 @@
                                })
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
-            updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
         }
+        
+        function nearestWalkys() {
+            navigator.geolocation.getCurrentPosition(onSuccess, onError)
+            $.mobile.changePage("#nearest_walkys");
+        }
+        
+        function walkyRoute() {
+            updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
+            $.mobile.changePage("#walky_route");
+        }
+        
     </script>
   </head>
   <body onload="onBodyLoad()">
-  <div data-role="page" id="search" data-theme="a">
-      <div data-role="header" data-position="fixed">
-          <p>search form</p>
-      </div>
+  <div data-role="page" id="nearest_walkys" data-theme="a">
       <div data-role="content" style="padding: 0; margin: 0;">
-          <div id="map_canvas" style="height: 355px; width:100%;"></div>
+          <div id="map_canvas" style="height: 410px; width:100%;"></div>
       </div>
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
               <ul>
-                  <a id="location" class="location" data-role="button" data-icon="location" data-inline="true">Locate Me</a>
-                  <li><a id="search" data-icon="search" data-iconpos="top" class="ui-btn-active ui-state-persist" href="#search">Search</a></li>
-                  <li><a id="direction" data-icon="direction" data-iconpos="top" href="#direction">Direction</a></li>
+                  <li><a id="search" data-icon="search" data-iconpos="top" class="ui-btn-active ui-state-persist">Nearest Walkys</a></li>
+                  <li><a id="direction" data-icon="direction" data-iconpos="top" onClick="walkyRoute()">Walky Route</a></li>
               </ul>
           </div>
       </div>
   </div>
-  <div data-role="page" id="direction" data-theme="a">
+  <div data-role="page" id="walky_route" data-theme="a">
       <div data-role="header" data-position="fixed">
           <p>direction form</p>
       </div>
@@ -115,9 +117,8 @@
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
               <ul>
-                  <a id="location" class="location" data-role="button" data-icon="location" data-inline="true">Locate Me</a>
-                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" href="#search">Search</a></li>
-                  <li><a id="direction" data-icon="direction" data-iconpos="top" class="ui-btn-active ui-state-persist">Direction</a></li>
+                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" onClick="nearestWalkys()">Nearest Walky</a></li>
+                  <li><a id="direction" data-icon="direction" data-iconpos="top" class="ui-btn-active ui-state-persist">Walky Route</a></li>
               </ul>
           </div>
       </div>
