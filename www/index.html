@@ -34,7 +34,14 @@
     <link rel="stylesheet" href="jquery/jquery.mobile-1.0b2.min.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="jquery/jquery.mobile-1.0b2.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" charset="utf-8">
+        var defaultMapCenter = new google.maps.LatLng(40.760642638530754, -73.9783126115799)
+        var defaultMapZoom = 15
+        var map
+        var directionsService
+        var directionsDisplay
+
         var loc_lat = 40.739165;
         var loc_lng = -73.989653;
         var loc_accuracy = 85.5;
@@ -61,6 +68,22 @@
             $('.location').click(function() {
                navigator.geolocation.getCurrentPosition(onSuccess, onError)
             })
+            map = new google.maps.Map(document.getElementById("map_canvas"), {
+                                      mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                      center: defaultMapCenter,
+                                      zoom: defaultMapZoom
+                                      })
+            places = $.getJSON('places.json', null, function(places) {
+                               $.each(places, function(i, place) {
+                                      new google.maps.Marker({
+                                                             position: new google.maps.LatLng(place.lat, place.lng),
+                                                             map: map
+                                                             })
+                                      })
+                               })
+            directionsService = new google.maps.DirectionsService()
+            directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
+            updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
         }
     </script>
   </head>
@@ -69,8 +92,8 @@
       <div data-role="header" data-position="fixed">
           <p>search form</p>
       </div>
-      <div data-role="content">
-          <p>Map with privately owned public spaces</p>
+      <div data-role="content" style="padding: 0; margin: 0;">
+          <div id="map_canvas" style="height: 355px; width:100%;"></div>
       </div>
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
@@ -99,5 +122,24 @@
           </div>
       </div>
   </div>
+      
+  <script>
+    function updateRoute(strOrigin, strDestination) {
+      directionsRequest = {
+        origin: strOrigin,
+        destination: strDestination,
+        travelMode: google.maps.TravelMode.WALKING
+      }
+
+      directionsService.route(directionsRequest, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(result);
+          map.fitBounds(result.routes[0].bounds)
+        }
+      })
+      
+      directionsDisplay.setMap(map)
+    }
+    </script>
   </body>
 </html>

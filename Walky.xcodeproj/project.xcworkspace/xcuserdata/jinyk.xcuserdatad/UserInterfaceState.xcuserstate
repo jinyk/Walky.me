@@ -1358,7 +1358,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>334960261.73847097</real>
+		<real>334960752.01124698</real>
 		<string>{0, 374}</string>
 		<dict>
 			<key>$class</key>
@@ -1689,9 +1689,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334960723.41996199</real>
-		<string>{1863, 1057}</string>
-		<string>{2259, 0}</string>
+		<real>334961332.30756098</real>
+		<string>{0, 2167}</string>
+		<string>{4030, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2584,7 +2584,7 @@
 				<integer>222</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>334960599.75105298</real>
+			<real>334960883.19398499</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -2595,7 +2595,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 4:36 PM</string>
+		<string>Today at 4:41 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -5687,7 +5687,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>412</integer>
+					<integer>17</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6341,9 +6341,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334960723.42121297</real>
-		<string>{1863, 1057}</string>
-		<string>{2259, 0}</string>
+		<real>334961332.30808598</real>
+		<string>{0, 2167}</string>
+		<string>{4030, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6376,7 +6376,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {967, 391}}</string>
+		<string>{{0, 0}, {967, 680}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
