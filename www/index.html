@@ -11,12 +11,6 @@
 	-->
 	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
     <style>
-        #location .ui-icon {
-            background-image: url(images/193-location-arrow.png);
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: 16px 16px;
-        }
         #search .ui-icon {
             background-image: url(images/06-magnify.png);
             background-position: 50% 50%;
@@ -29,46 +23,45 @@
             background-repeat: no-repeat;
             background-size: 16px 16px;
         }
+        #location .ui-icon {
+            background-image: url(images/193-location-arrow.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+        }
     </style>
 	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
     <link rel="stylesheet" href="jquery/jquery.mobile-1.0b2.min.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="jquery/jquery.mobile-1.0b2.min.js"></script>
     <script type="text/javascript" charset="utf-8">
-	// If you want to prevent dragging, uncomment this section
-	/*
-	function preventBehavior(e) 
-	{ 
-      e.preventDefault(); 
-    };
-	document.addEventListener("touchmove", preventBehavior, false);
-	*/
-	
-	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-	for more details -jm */
-	/*
-	function handleOpenURL(url)
-	{
-		// TODO: do something with the url passed in.
-	}
-	*/
-	
-	function onBodyLoad()
-	{		
-		document.addEventListener("deviceready",onDeviceReady,false);
-	}
-	
-	/* When this function is called, PhoneGap has been initialized and is ready to roll */
-	/* If you are supporting your own protocol, the var invokeString will contain any arguments to the app launch.
-	see http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-	for more details -jm */
-	function onDeviceReady()
-	{
-		// do your thing!
-		//navigator.notification.alert("PhoneGap is working")
-	}
-    
+        var loc_lat = 40.739165;
+        var loc_lng = -73.989653;
+        var loc_accuracy = 85.5;
+        var loc_time = new Date();
+
+        var onSuccess = function(position) {
+            loc_lat = position.coords.latitude
+            loc_lng = position.coords.longitude
+            loc_accuracy = position.coords.accuracy
+            loc_time = new Date(position.timestamp)
+        }
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        }
+
+        function onBodyLoad() {
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+        
+        function onDeviceReady() {
+            // do your thing!
+            //navigator.notification.alert("PhoneGap is working")
+            $('.location').click(function() {
+               navigator.geolocation.getCurrentPosition(onSuccess, onError)
+            })
+        }
     </script>
   </head>
   <body onload="onBodyLoad()">
@@ -82,8 +75,8 @@
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
               <ul>
-                  <li><a id="location" data-icon="location" data-iconpos="top" href="alink.html">Locate Me</a></li>
-                  <li><a id="search" data-icon="search" data-iconpos="top" href="#search">Search</a></li>
+                  <a id="location" class="location" data-role="button" data-icon="location" data-inline="true">Locate Me</a>
+                  <li><a id="search" data-icon="search" data-iconpos="top" class="ui-btn-active ui-state-persist" href="#search">Search</a></li>
                   <li><a id="direction" data-icon="direction" data-iconpos="top" href="#direction">Direction</a></li>
               </ul>
           </div>
@@ -99,9 +92,9 @@
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
               <ul>
-                  <li><a id="location" data-icon="location" data-iconpos="top" href="alink.html">Locate Me</a></li>
-                  <li><a id="search" data-icon="search" data-iconpos="top" href="#search">Search</a></li>
-                  <li><a id="direction" data-icon="direction" data-iconpos="top" href="#direction">Direction</a></li>
+                  <a id="location" class="location" data-role="button" data-icon="location" data-inline="true">Locate Me</a>
+                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" href="#search">Search</a></li>
+                  <li><a id="direction" data-icon="direction" data-iconpos="top" class="ui-btn-active ui-state-persist">Direction</a></li>
               </ul>
           </div>
       </div>
