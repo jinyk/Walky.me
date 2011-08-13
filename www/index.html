@@ -116,9 +116,9 @@
 
         function updateRoute(strOrigin, strDestination) {
             if (strOrigin == 'Current Location')
-            origin = new google.maps.LatLng(loc_lat, loc_lng)
+                origin = new google.maps.LatLng(loc_lat, loc_lng)
             else
-            origin = strOrigin
+                origin = strOrigin
             
             directionsRequest = {
                 origin: origin,
@@ -137,7 +137,6 @@
         }
 
         function nearestWalkys() {
-            alert("nearest")
 //            navigator.geolocation.getCurrentPosition(onSuccess, onError)
 //            var marker = new google.maps.Marker({
 //                draggable: false,
@@ -150,16 +149,16 @@
         }
 
         function walkyRoute() {
-            alert("routes")
             updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
         }
         
     </script>
   </head>
   <body onload="onBodyLoad()">
+  
   <div data-role="page" id="nearest_walkys" data-theme="a">
       <div data-role="content" style="padding: 0; margin: 0;">
-          <div id="map_canvas" style="height: 410px; width:100%;"></div>
+          <div id="map_canvas" style="height: 410px; width:320px;"></div>
       </div>
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
@@ -188,10 +187,11 @@
       <div data-role="content" style="padding: 0; margin: 0;">
           <div id="map_canvas_route" style="height: 300px; width:100%;"></div>
       </div>
+      
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
               <ul>
-                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" href="#nearest_walky">Nearest Walky</a></li>
+                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" href="#nearest_walkys" class="ui-btn-active ui-state-persist">Nearest Walky</a></li>
                   <li><a id="direction" data-icon="direction" data-iconpos="top" class="ui-btn-active ui-state-persist">Walky Route</a></li>
               </ul>
           </div>
