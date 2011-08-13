@@ -39,6 +39,8 @@
         var defaultMapCenter = new google.maps.LatLng(40.760642638530754, -73.9783126115799)
         var defaultMapZoom = 15
         var map
+        var directionsService
+        var directionsDisplay
 
 	// If you want to prevent dragging, uncomment this section
 	/*
@@ -85,8 +87,10 @@
                 })
             })
         })
+        directionsService = new google.maps.DirectionsService()
+        directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
+        updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
 	}
-    
     </script>
   </head>
   <body onload="onBodyLoad()">
@@ -124,5 +128,24 @@
           </div>
       </div>
   </div>
+      
+  <script>
+    function updateRoute(strOrigin, strDestination) {
+      directionsRequest = {
+        origin: strOrigin,
+        destination: strDestination,
+        travelMode: google.maps.TravelMode.WALKING
+      }
+
+      directionsService.route(directionsRequest, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(result);
+          map.fitBounds(result.routes[0].bounds)
+        }
+      })
+      
+      directionsDisplay.setMap(map)
+    }
+    </script>
   </body>
 </html>
