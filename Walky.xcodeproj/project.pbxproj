@@ -458,6 +458,7 @@
 				90C3097F13F6DEC000182386 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
