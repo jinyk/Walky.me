@@ -34,7 +34,11 @@
     <link rel="stylesheet" href="jquery/jquery.mobile-1.0b2.min.css" />
     <script src="jquery/jquery.min.js"></script>
     <script src="jquery/jquery.mobile-1.0b2.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" charset="utf-8">
+        var defaultMapCenter = new google.maps.LatLng(40.760642638530754, -73.9783126115799)
+        var defaultMapZoom = 15
+
 	// If you want to prevent dragging, uncomment this section
 	/*
 	function preventBehavior(e) 
@@ -67,6 +71,11 @@
 	{
 		// do your thing!
 		//navigator.notification.alert("PhoneGap is working")
+        map = new google.maps.Map(document.getElementById("map_canvas"), {
+                                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                  center: defaultMapCenter,
+                                  zoom: defaultMapZoom
+                                  })
 	}
     
     </script>
@@ -76,8 +85,8 @@
       <div data-role="header" data-position="fixed">
           <p>search form</p>
       </div>
-      <div data-role="content">
-          <p>Map with privately owned public spaces</p>
+      <div data-role="content" style="padding: 0; margin: 0;">
+          <div id="map_canvas" style="height: 355px; width:100%;"></div>
       </div>
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
