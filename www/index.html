@@ -10,10 +10,31 @@
 	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
 	-->
 	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+    <style>
+        #location .ui-icon {
+            background-image: url(images/193-location-arrow.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+        }
+        #search .ui-icon {
+            background-image: url(images/06-magnify.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+        }
+        #direction .ui-icon {
+            background-image: url(images/103-map.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+        }
+    </style>
 	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <link rel="stylesheet" href="jquery/jquery.mobile-1.0b2.min.css" />
+    <script src="jquery/jquery.min.js"></script>
+    <script src="jquery/jquery.mobile-1.0b2.min.js"></script>
     <script type="text/javascript" charset="utf-8">
-
-
 	// If you want to prevent dragging, uncomment this section
 	/*
 	function preventBehavior(e) 
@@ -45,13 +66,45 @@
 	function onDeviceReady()
 	{
 		// do your thing!
-		navigator.notification.alert("PhoneGap is working")
+		//navigator.notification.alert("PhoneGap is working")
 	}
     
     </script>
   </head>
   <body onload="onBodyLoad()">
-  	  <h1>Hey, it's PhoneGap!</h1>
-	  <p>Don't know how to get started? Check out <em><a href="http://github.com/phonegap/phonegap-start">PhoneGap Start</a></em>  	
+  <div data-role="page" id="search" data-theme="a">
+      <div data-role="header" data-position="fixed">
+          <p>search form</p>
+      </div>
+      <div data-role="content">
+          <p>Map with privately owned public spaces</p>
+      </div>
+      <div data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+              <ul>
+                  <li><a id="location" data-icon="location" data-iconpos="top" href="alink.html">Locate Me</a></li>
+                  <li><a id="search" data-icon="search" data-iconpos="top" href="#search">Search</a></li>
+                  <li><a id="direction" data-icon="direction" data-iconpos="top" href="#direction">Direction</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div data-role="page" id="direction" data-theme="a">
+      <div data-role="header" data-position="fixed">
+          <p>direction form</p>
+      </div>
+      <div data-role="content">
+          <p>Route me bro</p>
+      </div>
+      <div data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+              <ul>
+                  <li><a id="location" data-icon="location" data-iconpos="top" href="alink.html">Locate Me</a></li>
+                  <li><a id="search" data-icon="search" data-iconpos="top" href="#search">Search</a></li>
+                  <li><a id="direction" data-icon="direction" data-iconpos="top" href="#direction">Direction</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
   </body>
 </html>
