@@ -38,6 +38,7 @@
     <script type="text/javascript" charset="utf-8">
         var defaultMapCenter = new google.maps.LatLng(40.760642638530754, -73.9783126115799)
         var defaultMapZoom = 15
+        var map
 
 	// If you want to prevent dragging, uncomment this section
 	/*
@@ -72,10 +73,18 @@
 		// do your thing!
 		//navigator.notification.alert("PhoneGap is working")
         map = new google.maps.Map(document.getElementById("map_canvas"), {
-                                  mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                  center: defaultMapCenter,
-                                  zoom: defaultMapZoom
-                                  })
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: defaultMapCenter,
+            zoom: defaultMapZoom
+        })
+        places = $.getJSON('places.json', null, function(places) {
+            $.each(places, function(i, place) {
+                new google.maps.Marker({
+                    position: new google.maps.LatLng(place.lat, place.lng),
+                    map: map
+                })
+            })
+        })
 	}
     
     </script>

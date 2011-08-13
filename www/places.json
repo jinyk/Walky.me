@@ -1,0 +1,16 @@
+[
+  {
+    "nycgov_id": 109,
+    "name": "HarperCollins",
+    "address": "10 East 53rd St",
+    "space_type": "Through Block Arcade",
+    "classification": "Circulation",
+    "lat": 40.76102458244061,
+    "lng": -73.9781141281128,
+    "entries": [
+      {"lat": 40.760642638530754, "lng": -73.9783126115799},
+      {"lat": 40.761304944126614, "lng": -73.97791028022766}
+    ],
+    "hours": [{}]
+  }
+]
