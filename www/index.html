@@ -42,6 +42,22 @@
         var directionsMap
         var directionsService
         var directionsDisplay
+        var image = new google.maps.MarkerImage(
+                                            'images/image.png',
+                                            new google.maps.Size(40,35),
+                                            new google.maps.Point(0,0),
+                                            new google.maps.Point(0,35)
+                                            );
+        var shadow = new google.maps.MarkerImage(
+                                             'images/shadow.png',
+                                             new google.maps.Size(62,35),
+                                             new google.maps.Point(0, 0),
+                                             new google.maps.Point(0,35)
+                                             );
+        var shape = {
+            coord: [27,0,30,1,32,2,34,3,35,4,36,5,38,6,39,7,39,8,39,9,39,10,38,11,37,12,33,13,34,14,34,15,33,16,32,17,31,18,27,19,28,20,28,21,27,22,26,23,22,25,23,26,24,27,24,28,24,29,24,30,24,31,24,32,23,33,22,34,17,34,16,33,15,32,15,31,14,30,14,29,15,28,15,27,16,26,17,25,13,23,12,22,11,21,11,20,12,19,8,18,7,17,6,16,5,15,5,14,6,13,2,12,1,11,0,10,0,9,0,8,0,7,1,6,3,5,4,4,5,3,7,2,9,1,12,0,27,0],
+            type: 'poly'
+        }
 
         var loc_lat = 40.739165;
         var loc_lng = -73.989653;
@@ -77,6 +93,13 @@
                })
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
+            $('#walky_route').live('pagebeforeshow',function(event){
+                walkyRoute()
+            })
+            $('#nearest_walkys').live('pagebeforeshow',function(event){
+                nearestWalkys()
+            })
+            nearestWalkys()
         }
 
         var onSuccess = function(position) {
@@ -114,13 +137,21 @@
         }
 
         function nearestWalkys() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError)
-            $.mobile.changePage("#nearest_walkys");
+            alert("nearest")
+//            navigator.geolocation.getCurrentPosition(onSuccess, onError)
+//            var marker = new google.maps.Marker({
+//                draggable: false,
+//                icon: image,
+//                shadow: shadow,
+//                shape: shape,
+//                map: map,
+//                position: new google.maps.LatLng(loc_lat, loc_lng)
+//            });
         }
-        
+
         function walkyRoute() {
+            alert("routes")
             updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
-            $.mobile.changePage("#walky_route");
         }
         
     </script>
@@ -134,7 +165,7 @@
           <div data-role="navbar">
               <ul>
                   <li><a id="search" data-icon="search" data-iconpos="top" class="ui-btn-active ui-state-persist">Nearest Walkys</a></li>
-                  <li><a id="direction" data-icon="direction" data-iconpos="top" onClick="walkyRoute()">Walky Route</a></li>
+                  <li><a id="direction" data-icon="direction" data-iconpos="top" href="#walky_route">Walky Route</a></li>
               </ul>
           </div>
       </div>
@@ -160,7 +191,7 @@
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
               <ul>
-                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" onClick="nearestWalkys()">Nearest Walky</a></li>
+                  <li><a id="search" data-icon="search" data-iconpos="top" data-direction="reverse" href="#nearest_walky">Nearest Walky</a></li>
                   <li><a id="direction" data-icon="direction" data-iconpos="top" class="ui-btn-active ui-state-persist">Walky Route</a></li>
               </ul>
           </div>
