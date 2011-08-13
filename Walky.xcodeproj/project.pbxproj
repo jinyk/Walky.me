@@ -33,6 +33,7 @@
 		90C3097213F6DEC000182386 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90C3097113F6DEC000182386 /* Capture.bundle */; };
 		90C3097413F6DEC000182386 /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90C3097313F6DEC000182386 /* PhoneGap.plist */; };
 		90C3097813F6DEC000182386 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C3097713F6DEC000182386 /* AppDelegate.m */; };
+		90C3098113F6E09700182386 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 90C3098013F6E09700182386 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +51,10 @@
 		90C3094B13F6DEC000182386 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		90C3094D13F6DEC000182386 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		90C3094F13F6DEC000182386 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		90C3095313F6DEC000182386 /* Walky-Info.plist */ = {isa = PBXFileReference; path = "Walky-Info.plist"; sourceTree = "<group>"; };
+		90C3095313F6DEC000182386 /* Walky-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Walky-Info.plist"; sourceTree = "<group>"; };
 		90C3095513F6DEC000182386 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		90C3095713F6DEC000182386 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		90C3095913F6DEC000182386 /* Walky-Prefix.pch */ = {isa = PBXFileReference; path = "Walky-Prefix.pch"; sourceTree = "<group>"; };
+		90C3095913F6DEC000182386 /* Walky-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walky-Prefix.pch"; sourceTree = "<group>"; };
 		90C3095A13F6DEC000182386 /* PhoneGap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhoneGap.framework; path = /Users/Shared/PhoneGap/Frameworks/PhoneGap.framework; sourceTree = "<absolute>"; };
 		90C3095F13F6DEC000182386 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Resources/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		90C3096313F6DEC000182386 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -64,9 +65,10 @@
 		90C3096F13F6DEC000182386 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		90C3097113F6DEC000182386 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		90C3097313F6DEC000182386 /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		90C3097613F6DEC000182386 /* AppDelegate.h */ = {isa = PBXFileReference; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		90C3097613F6DEC000182386 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
 		90C3097713F6DEC000182386 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
-		90C3097A13F6DEC000182386 /* README */ = {isa = PBXFileReference; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		90C3097A13F6DEC000182386 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
+		90C3098013F6E09700182386 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		90C3092513F6DEC000182386 = {
 			isa = PBXGroup;
 			children = (
+				90C3098013F6E09700182386 /* www */,
 				90C3095113F6DEC000182386 /* Walky */,
 				90C3093613F6DEC000182386 /* Frameworks */,
 				90C3093413F6DEC000182386 /* Products */,
@@ -254,6 +257,9 @@
 /* Begin PBXProject section */
 		90C3092713F6DEC000182386 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 90C3092A13F6DEC000182386 /* Build configuration list for PBXProject "Walky" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -287,6 +293,7 @@
 				90C3097013F6DEC000182386 /* Default@2x.png in Resources */,
 				90C3097213F6DEC000182386 /* Capture.bundle in Resources */,
 				90C3097413F6DEC000182386 /* PhoneGap.plist in Resources */,
+				90C3098113F6E09700182386 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
