@@ -39,6 +39,7 @@
         var defaultMapCenter = new google.maps.LatLng(40.760642638530754, -73.9783126115799)
         var defaultMapZoom = 15
         var map
+        var directionsMap
         var directionsService
         var directionsDisplay
 
@@ -52,6 +53,8 @@
             loc_lng = position.coords.longitude
             loc_accuracy = position.coords.accuracy
             loc_time = new Date(position.timestamp)
+            map.setCenter(new google.maps.LatLng(loc_lat, loc_lng))
+            directionsMap.setCenter(new google.maps.LatLng(loc_lat, loc_lng))
         }
         function onError(error) {
             alert('code: '    + error.code    + '\n' +
@@ -69,21 +72,29 @@
                navigator.geolocation.getCurrentPosition(onSuccess, onError)
             })
             map = new google.maps.Map(document.getElementById("map_canvas"), {
-                                      mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                      center: defaultMapCenter,
-                                      zoom: defaultMapZoom
-                                      })
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: defaultMapCenter,
+                zoom: defaultMapZoom
+            })
+            directionsMap = new google.maps.Map(document.getElementById("map_canvas_route"), {
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: defaultMapCenter,
+                zoom: defaultMapZoom
+            })
             places = $.getJSON('places.json', null, function(places) {
-                               $.each(places, function(i, place) {
-                                      new google.maps.Marker({
-                                                             position: new google.maps.LatLng(place.lat, place.lng),
-                                                             map: map
-                                                             })
-                                      })
-                               })
+                $.each(places, function(i, place) {
+                    new google.maps.Marker({
+                        position: new google.maps.LatLng(place.lat, place.lng),
+                        map: map
+                    })
+                    new google.maps.Marker({
+                        position: new google.maps.LatLng(place.lat, place.lng),
+                        map: directionsMap
+                    })
+                })
+            })
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
-            updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
         }
     </script>
   </head>
@@ -105,12 +116,23 @@
           </div>
       </div>
   </div>
+  
   <div data-role="page" id="direction" data-theme="a">
       <div data-role="header" data-position="fixed">
-          <p>direction form</p>
+        <div data-role="fieldcontain">
+            <label for="start" style="display: inline-block; width: 50px;">
+                Start
+            </label>
+            <input id="input_start" name="start" value="Current Location"><br>
+            <label for="end" style="display: inline-block; width: 50px;">
+                End
+            </label>
+            <input id="input_end" name="end">
+            <input type="button" value="Go" onClick="updateRoute($('#input_start').val(), $('#input_end').val())">
+        </div>
       </div>
-      <div data-role="content">
-          <p>Route me bro</p>
+      <div data-role="content" style="padding: 0; margin: 0;">
+          <div id="map_canvas_route" style="height: 300px; width:100%;"></div>
       </div>
       <div data-role="footer" data-position="fixed">
           <div data-role="navbar">
@@ -125,8 +147,13 @@
       
   <script>
     function updateRoute(strOrigin, strDestination) {
+        if (strOrigin == 'Current Location')
+            origin = new google.maps.LatLng(loc_lat, loc_lng)
+        else
+            origin = strOrigin
+            
       directionsRequest = {
-        origin: strOrigin,
+        origin: origin,
         destination: strDestination,
         travelMode: google.maps.TravelMode.WALKING
       }
@@ -134,11 +161,11 @@
       directionsService.route(directionsRequest, function(result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(result);
-          map.fitBounds(result.routes[0].bounds)
+          directionsMap.fitBounds(result.routes[0].bounds)
         }
       })
       
-      directionsDisplay.setMap(map)
+      directionsDisplay.setMap(directionsMap)
     }
     </script>
   </body>
