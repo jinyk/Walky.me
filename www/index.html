@@ -97,6 +97,9 @@
             $('#walky_route').live('pagebeforeshow',function(event){
                 walkyRoute()
             })
+            $('#walky_route').live('pagecreate',function(event){
+                updateRoute("Current Location", "194 West 53rd St, New York, NY")
+            })
             $('#nearest_walkys').live('pagebeforeshow',function(event){
                 nearestWalkys()
             })
@@ -135,10 +138,6 @@
             })
     
             directionsDisplay.setMap(directionsMap)
-                    directionsDisplay.setMap(directionsMap)
-                    directionsMap.fitBounds(result.routes[0].bounds)
-                }
-            })
         }
 
         function nearestWalkys() {
@@ -154,7 +153,6 @@
         }
 
         function walkyRoute() {
-            updateRoute("Current Location", "194 West 53rd St, New York, NY")
         }
         
     </script>
