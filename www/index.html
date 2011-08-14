@@ -60,8 +60,9 @@
             type: 'poly'
         }
 
-        var loc_lat = 40.758546;
-        var loc_lng = -73.977199;
+        // 40.758359,-73.973436
+        var loc_lat = 40.758359;
+        var loc_lng = -73.973436;
         var loc_accuracy = 85.5;
         var loc_time = new Date();
 
@@ -104,7 +105,7 @@
                 walkyRoute()
             })
             $('#walky_route').live('pagecreate',function(event){
-                updateRoute("Current Location", "194 West 53rd St, New York, NY")
+                                   updateRoute("Current Location", "1697 Broadway")
             })
             $('#nearest_walkys').live('pagebeforeshow',function(event){
                 nearestWalkys()
@@ -147,7 +148,7 @@
         }
 
         function nearestWalkys() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError)
+            //navigator.geolocation.getCurrentPosition(onSuccess, onError)
             var marker = new google.maps.Marker({
                 draggable: false,
                 icon: image,
