@@ -1392,7 +1392,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>334980356.763825</real>
+		<real>334981273.71635801</real>
 		<string>{0, 379}</string>
 		<dict>
 			<key>$class</key>
@@ -1723,9 +1723,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334980351.72869098</real>
-		<string>{3519, 1468}</string>
-		<string>{4367, 0}</string>
+		<real>334981321.87465799</real>
+		<string>{2701, 1383}</string>
+		<string>{3277, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2759,7 +2759,7 @@
 				<integer>235</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>334980352.19626302</real>
+			<real>334981311.38742799</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -2770,7 +2770,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 10:05 PM</string>
+		<string>Today at 10:21 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -3049,7 +3049,7 @@
 				<integer>261</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/Walky/main.m</string>
+		<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/www/index.html</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3067,7 +3067,7 @@
 				<integer>263</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/www/index.html</string>
+		<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/Walky/main.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5090,11 +5090,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>560</integer>
+					<integer>558</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>561</integer>
+					<integer>559</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5197,7 +5197,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>main.m</string>
+		<string>index.html</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6060,15 +6060,15 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>542</integer>
+					<integer>541</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>547</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>548</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>549</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6448,7 +6448,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>540</integer>
+					<integer>539</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6507,23 +6507,23 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>383</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>523</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>524</integer>
+					<integer>533</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>535</integer>
+					<integer>527</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>528</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>528</integer>
+					<integer>527</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6531,11 +6531,10 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>538</integer>
+					<integer>537</integer>
 				</dict>
 			</array>
 		</dict>
-		<string>public.objective-c-source</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6545,17 +6544,17 @@
 			<key>DocumentLocation</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>534</integer>
+				<integer>531</integer>
 			</dict>
 			<key>DomainIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>525</integer>
+				<integer>524</integer>
 			</dict>
 			<key>IdentifierPath</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>526</integer>
+				<integer>525</integer>
 			</dict>
 			<key>IndexOfDocumentIdentifier</key>
 			<dict>
@@ -6574,19 +6573,15 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>527</integer>
+					<integer>526</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>528</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>529</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>531</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>532</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6599,10 +6594,22 @@
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>528</integer>
+				<integer>527</integer>
 			</dict>
 		</dict>
-		<string>main.m</string>
+		<string>index.html</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>355</integer>
+			</dict>
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>318</integer>
+			</dict>
+		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6615,31 +6622,6 @@
 				<integer>530</integer>
 			</dict>
 		</dict>
-		<string>Supporting Files</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>355</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>67</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>355</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>533</integer>
-			</dict>
-		</dict>
 		<string>Walky</string>
 		<dict>
 			<key>$class</key>
@@ -6650,13 +6632,22 @@
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>78</integer>
+				<integer>532</integer>
 			</dict>
 			<key>timestamp</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
 			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>26</integer>
+			</dict>
+			<key>NS.string</key>
+			<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/www/index.html</string>
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -6687,11 +6678,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>536</integer>
+					<integer>534</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>537</integer>
+					<integer>535</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -6699,12 +6690,13 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>111</integer>
+					<integer>536</integer>
 				</dict>
 			</array>
 		</dict>
-		<real>334980356.76443797</real>
-		<string>{0, 379}</string>
+		<real>334981321.875166</real>
+		<string>{2701, 1383}</string>
+		<string>{3277, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6719,10 +6711,10 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>539</integer>
+				<integer>538</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/Walky/main.m</string>
+		<string>file://localhost/Users/jinyk/Projects/PhoneGap/Walky.me/www/index.html</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6733,7 +6725,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>541</integer>
+					<integer>540</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6755,7 +6747,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>543</integer>
+					<integer>542</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6769,11 +6761,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>544</integer>
+					<integer>543</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>546</integer>
+					<integer>545</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6802,7 +6794,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>545</integer>
+					<integer>544</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6832,7 +6824,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>547</integer>
+					<integer>546</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6862,12 +6854,12 @@
 			<key>primaryEditorContextNode</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>550</integer>
+				<integer>549</integer>
 			</dict>
 			<key>rootLayoutTreeNode</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>558</integer>
+				<integer>556</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6886,14 +6878,14 @@
 			<key>documentArchivableRepresentation</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>551</integer>
+				<integer>550</integer>
 			</dict>
 			<key>orientation</key>
 			<integer>0</integer>
 			<key>parent</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>558</integer>
+				<integer>556</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6905,17 +6897,17 @@
 			<key>DocumentLocation</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>534</integer>
+				<integer>531</integer>
 			</dict>
 			<key>DomainIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>525</integer>
+				<integer>524</integer>
 			</dict>
 			<key>IdentifierPath</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>552</integer>
+				<integer>551</integer>
 			</dict>
 			<key>IndexOfDocumentIdentifier</key>
 			<dict>
@@ -6933,19 +6925,15 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>552</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
 					<integer>553</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>554</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>555</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>556</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6958,7 +6946,7 @@
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>528</integer>
+				<integer>527</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6970,7 +6958,7 @@
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>530</integer>
+				<integer>318</integer>
 			</dict>
 		</dict>
 		<dict>
@@ -6982,19 +6970,7 @@
 			<key>Identifier</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>67</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>355</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>557</integer>
+				<integer>555</integer>
 			</dict>
 		</dict>
 		<string>Walky</string>
@@ -7007,7 +6983,7 @@
 			<key>children</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>559</integer>
+				<integer>557</integer>
 			</dict>
 			<key>contentType</key>
 			<integer>0</integer>
@@ -7034,7 +7010,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>550</integer>
+					<integer>549</integer>
 				</dict>
 			</array>
 		</dict>
