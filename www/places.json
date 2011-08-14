@@ -1,30 +1,1304 @@
-[
- {
- "nycgov_id": 109,
- "name": "HarperCollins",
- "address": "10 East 53rd St",
- "space_type": "Through Block Arcade",
- "classification": "Circulation",
- "lat": 40.76102458244061,
- "lng": -73.9781141281128,
- "entries": [
-             {"lat": 40.760642638530754, "lng": -73.9783126115799},
-             {"lat": 40.761304944126614, "lng": -73.97791028022766}
-             ],
- "hours": [{}]
- },
- {
- "nycgov_id": 109,
- "name": "HarperCollins",
- "address": "10 East 53rd St",
- "space_type": "Through Block Arcade",
- "classification": "Circulation",
- "lat": 40.76102458244061,
- "lng": -73.9781141281128,
- "entries": [
-             {"lat": 40.760642638530754, "lng": -73.9783126115799},
-             {"lat": 40.761304944126614, "lng": -73.97791028022766}
-             ],
- "hours": [{}]
- }
-]
+ [
+  { 
+  "nycgov_id": 56, 
+  "name": "", 
+  "address": "108 Fifth Avenue", 
+  "space_type": "Residential Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.737271, 
+  "lng": -73.99284, 
+  "entries": [ 
+              {"lat": 40.737271, "lng": -73.99284}, 
+              {"lat": 40.737271, "lng": -73.99284} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 57, 
+  "name": "Madison Green", 
+  "address": "5 East 22nd Street", 
+  "space_type": "Residential Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.740587, 
+  "lng": -73.989012, 
+  "entries": [ 
+              {"lat": 40.740587, "lng": -73.989012}, 
+              {"lat": 40.740587, "lng": -73.989012} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 58, 
+  "name": "", 
+  "address": "50 Lexington Avenue", 
+  "space_type": "Residential Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.740571, 
+  "lng": -73.984175, 
+  "entries": [ 
+              {"lat": 40.740571, "lng": -73.984175}, 
+              {"lat": 40.740571, "lng": -73.984175} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 59, 
+  "name": "Stanford", 
+  "address": "45 East 25th Street", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.741969, 
+  "lng": -73.986246, 
+  "entries": [ 
+              {"lat": 40.741969, "lng": -73.986246}, 
+              {"lat": 40.741969, "lng": -73.986246} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 60, 
+  "name": "New York Merchandise Mart", 
+  "address": "41 Madison Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.742636, 
+  "lng": -73.986568, 
+  "entries": [ 
+              {"lat": 40.742636, "lng": -73.986568}, 
+              {"lat": 40.742636, "lng": -73.986568} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 61, 
+  "name": "", 
+  "address": "230 West 27th Street", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.746859, 
+  "lng": -73.994729, 
+  "entries": [ 
+              {"lat": 40.746859, "lng": -73.994729}, 
+              {"lat": 40.746859, "lng": -73.994729} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 62, 
+  "name": "Madison Belvedere", 
+  "address": "10 East 29th Street", 
+  "space_type": "Residential Plaza", 
+  "classification": "under construction", 
+  "lat": 40.744896, 
+  "lng": -73.986247, 
+  "entries": [ 
+              {"lat": 40.744896, "lng": -73.986247}, 
+              {"lat": 40.744896, "lng": -73.986247} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 63, 
+  "name": "Ascot", 
+  "address": "407 Park Avenue South", 
+  "space_type": "Residential Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.743421, 
+  "lng": -73.983728, 
+  "entries": [ 
+              {"lat": 40.743421, "lng": -73.983728}, 
+              {"lat": 40.743421, "lng": -73.983728} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 64, 
+  "name": "", 
+  "address": "475 Park Avenue South", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.745333, 
+  "lng": -73.982333, 
+  "entries": [ 
+              {"lat": 40.745333, "lng": -73.982333}, 
+              {"lat": 40.745333, "lng": -73.982333} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 65, 
+  "name": "", 
+  "address": "1250 Broadway", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.747915, 
+  "lng": -73.988062, 
+  "entries": [ 
+              {"lat": 40.747915, "lng": -73.988062}, 
+              {"lat": 40.747915, "lng": -73.988062} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 66, 
+  "name": "Two Penn Plaza/Madison Square Garden", 
+  "address": "2 Pennsylvania Plaza", 
+  "space_type": "Plaza", 
+  "classification": "Circulation", 
+  "lat": 40.67802, 
+  "lng": -73.897576, 
+  "entries": [ 
+              {"lat": 40.67802, "lng": -73.897576}, 
+              {"lat": 40.67802, "lng": -73.897576} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 67, 
+  "name": "One Penn Plaza", 
+  "address": "1 Pennsylvania Plaza", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.678048, 
+  "lng": -73.897436, 
+  "entries": [ 
+              {"lat": 40.678048, "lng": -73.897436}, 
+              {"lat": 40.678048, "lng": -73.897436} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 68, 
+  "name": "Three Park Avenue", 
+  "address": "3 Park Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.746643, 
+  "lng": -73.981345, 
+  "entries": [ 
+              {"lat": 40.746643, "lng": -73.981345}, 
+              {"lat": 40.746643, "lng": -73.981345} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 69, 
+  "name": "", 
+  "address": "420 Fifth Avenue", 
+  "space_type": "Urban Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.7509, 
+  "lng": -73.982918, 
+  "entries": [ 
+              {"lat": 40.7509, "lng": -73.982918}, 
+              {"lat": 40.7509, "lng": -73.982918} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 70, 
+  "name": "Fifth Avenue Tower", 
+  "address": "445 Fifth Avenue", 
+  "space_type": "Urban Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.751701, 
+  "lng": -73.981988, 
+  "entries": [ 
+              {"lat": 40.751701, "lng": -73.981988}, 
+              {"lat": 40.751701, "lng": -73.981988} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 71, 
+  "name": "World Apparel Center", 
+  "address": "1411 Broadway", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.753728, 
+  "lng": -73.987163, 
+  "entries": [ 
+              {"lat": 40.753728, "lng": -73.987163}, 
+              {"lat": 40.753728, "lng": -73.987163} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 72, 
+  "name": "Verizon", 
+  "address": "1095 Sixth Avenue", 
+  "space_type": "Special Permit Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.754702, 
+  "lng": -73.984417, 
+  "entries": [ 
+              {"lat": 40.754702, "lng": -73.984417}, 
+              {"lat": 40.754702, "lng": -73.984417} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 73, 
+  "name": "", 
+  "address": "489 Fifth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.753062, 
+  "lng": -73.980986, 
+  "entries": [ 
+              {"lat": 40.753062, "lng": -73.980986}, 
+              {"lat": 40.753062, "lng": -73.980986} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 74, 
+  "name": "Philip Morris", 
+  "address": "Philip Morris", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.70027, 
+  "lng": -73.992554, 
+  "entries": [ 
+              {"lat": 40.70027, "lng": -73.992554}, 
+              {"lat": 40.70027, "lng": -73.992554} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 75, 
+  "name": "", 
+  "address": "101 Park Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.75081, 
+  "lng": -73.978427, 
+  "entries": [ 
+              {"lat": 40.75081, "lng": -73.978427}, 
+              {"lat": 40.75081, "lng": -73.978427} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 76, 
+  "name": "Emigrant Savings Bank", 
+  "address": "6 East 43rd Street", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.753926, 
+  "lng": -73.980211, 
+  "entries": [ 
+              {"lat": 40.753926, "lng": -73.980211}, 
+              {"lat": 40.753926, "lng": -73.980211} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 77, 
+  "name": "Grace", 
+  "address": "1114 Sixth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.755252, 
+  "lng": -73.98362, 
+  "entries": [ 
+              {"lat": 40.755252, "lng": -73.98362}, 
+              {"lat": 40.755252, "lng": -73.98362} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 78, 
+  "name": "", 
+  "address": "1133 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Circulation", 
+  "lat": 40.75597, 
+  "lng": -73.983499, 
+  "entries": [ 
+              {"lat": 40.75597, "lng": -73.983499}, 
+              {"lat": 40.75597, "lng": -73.983499} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 79, 
+  "name": "", 
+  "address": "1155 Sixth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.756646, 
+  "lng": -73.983002, 
+  "entries": [ 
+              {"lat": 40.756646, "lng": -73.983002}, 
+              {"lat": 40.756646, "lng": -73.983002} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 80, 
+  "name": "Millennium Broadway", 
+  "address": "145 West 44th Street", 
+  "space_type": "Through Block Connection", 
+  "classification": "Circulation", 
+  "lat": 40.756734, 
+  "lng": -73.984217, 
+  "entries": [ 
+              {"lat": 40.756734, "lng": -73.984217}, 
+              {"lat": 40.756734, "lng": -73.984217} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 81, 
+  "name": "One Astor Place", 
+  "address": "1515 Broadway", 
+  "space_type": "Pedestrian Thoroughfare", 
+  "classification": "Marginal", 
+  "lat": 40.757423, 
+  "lng": -73.986023, 
+  "entries": [ 
+              {"lat": 40.757423, "lng": -73.986023}, 
+              {"lat": 40.757423, "lng": -73.986023} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 82, 
+  "name": "Marriott Marquis", 
+  "address": "1535 Broadway", 
+  "space_type": "Broadway Plaza", 
+  "classification": "Circulation", 
+  "lat": 40.758306, 
+  "lng": -73.985642, 
+  "entries": [ 
+              {"lat": 40.758306, "lng": -73.985642}, 
+              {"lat": 40.758306, "lng": -73.985642} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 83, 
+  "name": "Bertelsmann", 
+  "address": "1548 Broadway", 
+  "space_type": "Through Block Connection", 
+  "classification": "Circulation", 
+  "lat": 40.758391, 
+  "lng": -73.985042, 
+  "entries": [ 
+              {"lat": 40.758391, "lng": -73.985042}, 
+              {"lat": 40.758391, "lng": -73.985042} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 84, 
+  "name": "United States Trust", 
+  "address": "114 West 47th Street", 
+  "space_type": "Through Block Connection", 
+  "classification": "Circulation", 
+  "lat": 40.75808, 
+  "lng": -73.982288, 
+  "entries": [ 
+              {"lat": 40.75808, "lng": -73.982288}, 
+              {"lat": 40.75808, "lng": -73.982288} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 85, 
+  "name": "Stevens Tower", 
+  "address": "1185 Sixth Avenue", 
+  "space_type": "Basement Concourse", 
+  "classification": "Circulation", 
+  "lat": 40.757647, 
+  "lng": -73.982273, 
+  "entries": [ 
+              {"lat": 40.757647, "lng": -73.982273}, 
+              {"lat": 40.757647, "lng": -73.982273} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 86, 
+  "name": "1211 Avenue of the Americas", 
+  "address": "1211 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.75843, 
+  "lng": -73.981702, 
+  "entries": [ 
+              {"lat": 40.75843, "lng": -73.981702}, 
+              {"lat": 40.75843, "lng": -73.981702} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 87, 
+  "name": "", 
+  "address": "1166 Sixth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.756941, 
+  "lng": -73.982382, 
+  "entries": [ 
+              {"lat": 40.756941, "lng": -73.982382}, 
+              {"lat": 40.756941, "lng": -73.982382} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 88, 
+  "name": "", 
+  "address": "575 Fifth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.756448, 
+  "lng": -73.978521, 
+  "entries": [ 
+              {"lat": 40.756448, "lng": -73.978521}, 
+              {"lat": 40.756448, "lng": -73.978521} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 89, 
+  "name": "Bear Stearns", 
+  "address": "383 Madison Avenue", 
+  "space_type": "Building Entrance Recess Area", 
+  "classification": "Circulation", 
+  "lat": 40.7556, 
+  "lng": -73.977034, 
+  "entries": [ 
+              {"lat": 40.7556, "lng": -73.977034}, 
+              {"lat": 40.7556, "lng": -73.977034} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 90, 
+  "name": "", 
+  "address": "245 Park Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.754752, 
+  "lng": -73.975567, 
+  "entries": [ 
+              {"lat": 40.754752, "lng": -73.975567}, 
+              {"lat": 40.754752, "lng": -73.975567} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 91, 
+  "name": "Westvaco", 
+  "address": "299 Park Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.75646, 
+  "lng": -73.974327, 
+  "entries": [ 
+              {"lat": 40.75646, "lng": -73.974327}, 
+              {"lat": 40.75646, "lng": -73.974327} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 92, 
+  "name": "", 
+  "address": "280 Park Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.756096, 
+  "lng": -73.975019, 
+  "entries": [ 
+              {"lat": 40.756096, "lng": -73.975019}, 
+              {"lat": 40.756096, "lng": -73.975019} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 93, 
+  "name": "", 
+  "address": "437 Madison Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.757369, 
+  "lng": -73.975748, 
+  "entries": [ 
+              {"lat": 40.757369, "lng": -73.975748}, 
+              {"lat": 40.757369, "lng": -73.975748} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 94, 
+  "name": "Tower 49", 
+  "address": "12 East 49th Street", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.757569, 
+  "lng": -73.977089, 
+  "entries": [ 
+              {"lat": 40.757569, "lng": -73.977089}, 
+              {"lat": 40.757569, "lng": -73.977089} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 95, 
+  "name": "Saks Tower", 
+  "address": "611 Fifth Avenue", 
+  "space_type": "Building Entrance Recess Area", 
+  "classification": "Marginal", 
+  "lat": 40.757941, 
+  "lng": -73.977547, 
+  "entries": [ 
+              {"lat": 40.757941, "lng": -73.977547}, 
+              {"lat": 40.757941, "lng": -73.977547} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 96, 
+  "name": "1251 Avenue of the Americas", 
+  "address": "1251 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.759674, 
+  "lng": -73.980802, 
+  "entries": [ 
+              {"lat": 40.759674, "lng": -73.980802}, 
+              {"lat": 40.759674, "lng": -73.980802} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 97, 
+  "name": "McGraw-Hill", 
+  "address": "1221 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.758788, 
+  "lng": -73.981371, 
+  "entries": [ 
+              {"lat": 40.758788, "lng": -73.981371}, 
+              {"lat": 40.758788, "lng": -73.981371} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 98, 
+  "name": "", 
+  "address": "745 Seventh Avenue", 
+  "space_type": "Public Plaza", 
+  "classification": "under construction", 
+  "lat": 40.760551, 
+  "lng": -73.983465, 
+  "entries": [ 
+              {"lat": 40.760551, "lng": -73.983465}, 
+              {"lat": 40.760551, "lng": -73.983465} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 99, 
+  "name": "Ritz", 
+  "address": "235 West 48th Street", 
+  "space_type": "Urban Plaza", 
+  "classification": "undergoing alteration", 
+  "lat": 40.760674, 
+  "lng": -73.985792, 
+  "entries": [ 
+              {"lat": 40.760674, "lng": -73.985792}, 
+              {"lat": 40.760674, "lng": -73.985792} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 100, 
+  "name": "Paramount Plaza", 
+  "address": "1633 Broadway", 
+  "space_type": "Special Permit Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.76162, 
+  "lng": -73.984115, 
+  "entries": [ 
+              {"lat": 40.76162, "lng": -73.984115}, 
+              {"lat": 40.76162, "lng": -73.984115} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 101, 
+  "name": "Paine Webber", 
+  "address": "1285 Sixth Avenue", 
+  "space_type": "Sidewalk Widening (Pedestrian Circulation Space)", 
+  "classification": "Circulation", 
+  "lat": 40.76077, 
+  "lng": -73.979993, 
+  "entries": [ 
+              {"lat": 40.76077, "lng": -73.979993}, 
+              {"lat": 40.76077, "lng": -73.979993} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 102, 
+  "name": "", 
+  "address": "650 Fifth Avenue", 
+  "space_type": "Cellar Floor Public Space", 
+  "classification": "Marginal", 
+  "lat": 40.759731, 
+  "lng": -73.976477, 
+  "entries": [ 
+              {"lat": 40.759731, "lng": -73.976477}, 
+              {"lat": 40.759731, "lng": -73.976477} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 103, 
+  "name": "Olympic Tower", 
+  "address": "645 Fifth Avenue", 
+  "space_type": "Covered Pedestrian Space", 
+  "classification": "Hiatus", 
+  "lat": 40.759338, 
+  "lng": -73.976416, 
+  "entries": [ 
+              {"lat": 40.759338, "lng": -73.976416}, 
+              {"lat": 40.759338, "lng": -73.976416} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 104, 
+  "name": "New York Palace Hotel", 
+  "address": "457 Madison Avenue", 
+  "space_type": "Courtyard", 
+  "classification": "Hiatus", 
+  "lat": 40.758033, 
+  "lng": -73.975266, 
+  "entries": [ 
+              {"lat": 40.758033, "lng": -73.975266}, 
+              {"lat": 40.758033, "lng": -73.975266} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 105, 
+  "name": "", 
+  "address": "40 East 52nd Street", 
+  "space_type": "Urban Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.758913, 
+  "lng": -73.974572, 
+  "entries": [ 
+              {"lat": 40.758913, "lng": -73.974572}, 
+              {"lat": 40.758913, "lng": -73.974572} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 106, 
+  "name": "", 
+  "address": "345 Park Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.758021, 
+  "lng": -73.973161, 
+  "entries": [ 
+              {"lat": 40.758021, "lng": -73.973161}, 
+              {"lat": 40.758021, "lng": -73.973161} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 107, 
+  "name": "", 
+  "address": "560 Lexington Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.756708, 
+  "lng": -73.972407, 
+  "entries": [ 
+              {"lat": 40.756708, "lng": -73.972407}, 
+              {"lat": 40.756708, "lng": -73.972407} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 108, 
+  "name": "Park Avenue Plaza", 
+  "address": "55 East 52nd Street", 
+  "space_type": "Through Block Arcade", 
+  "classification": "Destination", 
+  "lat": 40.758962, 
+  "lng": -73.97398, 
+  "entries": [ 
+              {"lat": 40.758962, "lng": -73.97398}, 
+              {"lat": 40.758962, "lng": -73.97398} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 109, 
+  "name": "HarperCollins", 
+  "address": "10 East 53rd Street", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.760047, 
+  "lng": -73.975319, 
+  "entries": [ 
+              {"lat": 40.760047, "lng": -73.975319}, 
+              {"lat": 40.760047, "lng": -73.975319} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 110, 
+  "name": "", 
+  "address": "520 Madison Avenue", 
+  "space_type": "Sidewalk Widening", 
+  "classification": "Circulation", 
+  "lat": 40.76009, 
+  "lng": -73.974168, 
+  "entries": [ 
+              {"lat": 40.76009, "lng": -73.974168}, 
+              {"lat": 40.76009, "lng": -73.974168} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 111, 
+  "name": "Deutsche Bank", 
+  "address": "31 West 52nd Street", 
+  "space_type": "Urban Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.760544, 
+  "lng": -73.97771, 
+  "entries": [ 
+              {"lat": 40.760544, "lng": -73.97771}, 
+              {"lat": 40.760544, "lng": -73.97771} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 112, 
+  "name": "CBS", 
+  "address": "51 West 52nd Street", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.760692, 
+  "lng": -73.97819, 
+  "entries": [ 
+              {"lat": 40.760692, "lng": -73.97819}, 
+              {"lat": 40.760692, "lng": -73.97819} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 113, 
+  "name": "", 
+  "address": "1330 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.76204, 
+  "lng": -73.97866, 
+  "entries": [ 
+              {"lat": 40.76204, "lng": -73.97866}, 
+              {"lat": 40.76204, "lng": -73.97866} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 114, 
+  "name": "", 
+  "address": "1301 Sixth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.761275, 
+  "lng": -73.979538, 
+  "entries": [ 
+              {"lat": 40.761275, "lng": -73.979538}, 
+              {"lat": 40.761275, "lng": -73.979538} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 115, 
+  "name": "Flatotel", 
+  "address": "135 West 52nd Street", 
+  "space_type": "Through Block Galleria", 
+  "classification": "Circulation", 
+  "lat": 40.761812, 
+  "lng": -73.980728, 
+  "entries": [ 
+              {"lat": 40.761812, "lng": -73.980728}, 
+              {"lat": 40.761812, "lng": -73.980728} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 116, 
+  "name": "1325 Avenue of the Americas", 
+  "address": "1325 Sixth Avenue", 
+  "space_type": "Through Block Galleria", 
+  "classification": "Circulation", 
+  "lat": 40.76289, 
+  "lng": -73.981236, 
+  "entries": [ 
+              {"lat": 40.76289, "lng": -73.981236}, 
+              {"lat": 40.76289, "lng": -73.981236} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 117, 
+  "name": "Tower 53", 
+  "address": "825 Seventh Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.763083, 
+  "lng": -73.981603, 
+  "entries": [ 
+              {"lat": 40.763083, "lng": -73.981603}, 
+              {"lat": 40.763083, "lng": -73.981603} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 118, 
+  "name": "", 
+  "address": "810 Seventh Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.762694, 
+  "lng": -73.982295, 
+  "entries": [ 
+              {"lat": 40.762694, "lng": -73.982295}, 
+              {"lat": 40.762694, "lng": -73.982295} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 119, 
+  "name": "", 
+  "address": "1700 Broadway", 
+  "space_type": "Plaza", 
+  "classification": "Circulation", 
+  "lat": 40.763746, 
+  "lng": -73.982435, 
+  "entries": [ 
+              {"lat": 40.763746, "lng": -73.982435}, 
+              {"lat": 40.763746, "lng": -73.982435} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 120, 
+  "name": "La Premiere", 
+  "address": "230 West 55th Street", 
+  "space_type": "Residential Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.764758, 
+  "lng": -73.982626, 
+  "entries": [ 
+              {"lat": 40.764758, "lng": -73.982626}, 
+              {"lat": 40.764758, "lng": -73.982626} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 121, 
+  "name": "Rihga Royal Hotel", 
+  "address": "151 West 54th Street", 
+  "space_type": "Through Block Connection", 
+  "classification": "Circulation", 
+  "lat": 40.76322, 
+  "lng": -73.980205, 
+  "entries": [ 
+              {"lat": 40.76322, "lng": -73.980205}, 
+              {"lat": 40.76322, "lng": -73.980205} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 122, 
+  "name": "CitySpire", 
+  "address": "156 West 56th Street", 
+  "space_type": "Building Entrance Recess Area", 
+  "classification": "Circulation", 
+  "lat": 40.764312, 
+  "lng": -73.979615, 
+  "entries": [ 
+              {"lat": 40.764312, "lng": -73.979615}, 
+              {"lat": 40.764312, "lng": -73.979615} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 123, 
+  "name": "Alliance Capital", 
+  "address": "1345 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.76265, 
+  "lng": -73.978513, 
+  "entries": [ 
+              {"lat": 40.76265, "lng": -73.978513}, 
+              {"lat": 40.76265, "lng": -73.978513} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 124, 
+  "name": "Men's Apparel", 
+  "address": "1350 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.762643, 
+  "lng": -73.978378, 
+  "entries": [ 
+              {"lat": 40.762643, "lng": -73.978378}, 
+              {"lat": 40.762643, "lng": -73.978378} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 125, 
+  "name": "1370 Avenue of the Americas", 
+  "address": "1370 Sixth Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.763288, 
+  "lng": -73.977731, 
+  "entries": [ 
+              {"lat": 40.763288, "lng": -73.977731}, 
+              {"lat": 40.763288, "lng": -73.977731} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 126, 
+  "name": "", 
+  "address": "712 Fifth Avenue", 
+  "space_type": "Approved Permanent Passageway", 
+  "classification": "Hiatus", 
+  "lat": 40.7621, 
+  "lng": -73.9748, 
+  "entries": [ 
+              {"lat": 40.7621, "lng": -73.9748}, 
+              {"lat": 40.7621, "lng": -73.9748} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 127, 
+  "name": "Sony", 
+  "address": "550 Madison Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.761112, 
+  "lng": -73.973327, 
+  "entries": [ 
+              {"lat": 40.761112, "lng": -73.973327}, 
+              {"lat": 40.761112, "lng": -73.973327} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 128, 
+  "name": "Warburg Dillon Read", 
+  "address": "535 Madison Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.760441, 
+  "lng": -73.973505, 
+  "entries": [ 
+              {"lat": 40.760441, "lng": -73.973505}, 
+              {"lat": 40.760441, "lng": -73.973505} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 129, 
+  "name": "Park Avenue Tower", 
+  "address": "65 East 55th Street", 
+  "space_type": "Urban Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.760787, 
+  "lng": -73.972462, 
+  "entries": [ 
+              {"lat": 40.760787, "lng": -73.972462}, 
+              {"lat": 40.760787, "lng": -73.972462} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 130, 
+  "name": "", 
+  "address": "450 Park Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.761464, 
+  "lng": -73.971192, 
+  "entries": [ 
+              {"lat": 40.761464, "lng": -73.971192}, 
+              {"lat": 40.761464, "lng": -73.971192} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 131, 
+  "name": "", 
+  "address": "590 Madison Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.762236, 
+  "lng": -73.972528, 
+  "entries": [ 
+              {"lat": 40.762236, "lng": -73.972528}, 
+              {"lat": 40.762236, "lng": -73.972528} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 132, 
+  "name": "Trump Tower", 
+  "address": "725 Fifth Avenue", 
+  "space_type": "Covered Pedestrian Space", 
+  "classification": "Destination", 
+  "lat": 40.762429, 
+  "lng": -73.974154, 
+  "entries": [ 
+              {"lat": 40.762429, "lng": -73.974154}, 
+              {"lat": 40.762429, "lng": -73.974154} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 133, 
+  "name": "", 
+  "address": "40 West 57th Street", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.763376, 
+  "lng": -73.97529, 
+  "entries": [ 
+              {"lat": 40.763376, "lng": -73.97529}, 
+              {"lat": 40.763376, "lng": -73.97529} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 134, 
+  "name": "Le Parker Meridien Hotel", 
+  "address": "118 West 57th Street", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.764515, 
+  "lng": -73.977994, 
+  "entries": [ 
+              {"lat": 40.764515, "lng": -73.977994}, 
+              {"lat": 40.764515, "lng": -73.977994} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 135, 
+  "name": "Metropolitan Tower", 
+  "address": "146 West 57th Street", 
+  "space_type": "Through Block Connection", 
+  "classification": "Circulation", 
+  "lat": 40.764784, 
+  "lng": -73.978632, 
+  "entries": [ 
+              {"lat": 40.764784, "lng": -73.978632}, 
+              {"lat": 40.764784, "lng": -73.978632} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 136, 
+  "name": "Carnegie Hall Tower", 
+  "address": "899 Seventh Avenue", 
+  "space_type": "Through Block Connection", 
+  "classification": "Circulation", 
+  "lat": 40.765408, 
+  "lng": -73.980011, 
+  "entries": [ 
+              {"lat": 40.765408, "lng": -73.980011}, 
+              {"lat": 40.765408, "lng": -73.980011} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 137, 
+  "name": "", 
+  "address": "888 Seventh Avenue", 
+  "space_type": "Plaza", 
+  "classification": "Neighborhood", 
+  "lat": 40.76495, 
+  "lng": -73.980553, 
+  "entries": [ 
+              {"lat": 40.76495, "lng": -73.980553}, 
+              {"lat": 40.76495, "lng": -73.980553} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 138, 
+  "name": "Carnegie Mews", 
+  "address": "211 West 56th Street", 
+  "space_type": "Plaza", 
+  "classification": "Marginal", 
+  "lat": 40.765175, 
+  "lng": -73.980939, 
+  "entries": [ 
+              {"lat": 40.765175, "lng": -73.980939}, 
+              {"lat": 40.765175, "lng": -73.980939} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 139, 
+  "name": "Symphony House", 
+  "address": "1755 Broadway", 
+  "space_type": "Urban Plaza", 
+  "classification": "Hiatus", 
+  "lat": 40.765714, 
+  "lng": -73.98211, 
+  "entries": [ 
+              {"lat": 40.765714, "lng": -73.98211}, 
+              {"lat": 40.765714, "lng": -73.98211} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 140, 
+  "name": "", 
+  "address": "58 West 58th Street", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.764336, 
+  "lng": -73.975458, 
+  "entries": [ 
+              {"lat": 40.764336, "lng": -73.975458}, 
+              {"lat": 40.764336, "lng": -73.975458} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 141, 
+  "name": "Park Lane Hotel", 
+  "address": "36 Central Park South", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.765192, 
+  "lng": -73.975488, 
+  "entries": [ 
+              {"lat": 40.765192, "lng": -73.975488}, 
+              {"lat": 40.765192, "lng": -73.975488} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 142, 
+  "name": "Solow", 
+  "address": "9 West 57th Street", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.763263, 
+  "lng": -73.974297, 
+  "entries": [ 
+              {"lat": 40.763263, "lng": -73.974297}, 
+              {"lat": 40.763263, "lng": -73.974297} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 143, 
+  "name": "General Motors Building at Trump International Plaza", 
+  "address": "767 Fifth Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.764042, 
+  "lng": -73.973085, 
+  "entries": [ 
+              {"lat": 40.764042, "lng": -73.973085}, 
+              {"lat": 40.764042, "lng": -73.973085} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 144, 
+  "name": "500 Park Tower", 
+  "address": "500 Park Avenue", 
+  "space_type": "Arcade", 
+  "classification": "Circulation", 
+  "lat": 40.762903, 
+  "lng": -73.970061, 
+  "entries": [ 
+              {"lat": 40.762903, "lng": -73.970061}, 
+              {"lat": 40.762903, "lng": -73.970061} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 145, 
+  "name": "Galleria", 
+  "address": "115 East 57th Street", 
+  "space_type": "Covered Pedestrian Space", 
+  "classification": "Hiatus", 
+  "lat": 40.761416, 
+  "lng": -73.969925, 
+  "entries": [ 
+              {"lat": 40.761416, "lng": -73.969925}, 
+              {"lat": 40.761416, "lng": -73.969925} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 146, 
+  "name": "", 
+  "address": "135 East 57th Street", 
+  "space_type": "Open Park Space", 
+  "classification": "Hiatus", 
+  "lat": 40.761151, 
+  "lng": -73.96929, 
+  "entries": [ 
+              {"lat": 40.761151, "lng": -73.96929}, 
+              {"lat": 40.761151, "lng": -73.96929} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 147, 
+  "name": "", 
+  "address": "110 East 59th Street", 
+  "space_type": "Arcade", 
+  "classification": "Marginal", 
+  "lat": 40.762532, 
+  "lng": -73.96926, 
+  "entries": [ 
+              {"lat": 40.762532, "lng": -73.96926}, 
+              {"lat": 40.762532, "lng": -73.96926} 
+              ], 
+  "hours": [{}] 
+  }, 
+  { 
+  "nycgov_id": 148, 
+  "name": "", 
+  "address": "499 Park Avenue", 
+  "space_type": "Glass-Enclosed Urban Plaza Equivalent", 
+  "classification": "Hiatus", 
+  "lat": 40.762742, 
+  "lng": -73.969662, 
+  "entries": [ 
+              {"lat": 40.762742, "lng": -73.969662}, 
+              {"lat": 40.762742, "lng": -73.969662} 
+              ], 
+  "hours": [{}] 
+  }
+  ]
