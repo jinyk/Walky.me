@@ -1392,7 +1392,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>334974539.616602</real>
+		<real>334974635.75223202</real>
 		<string>{0, 374}</string>
 		<dict>
 			<key>$class</key>
@@ -1723,9 +1723,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334974557.60864103</real>
-		<string>{221, 1347}</string>
-		<string>{848, 0}</string>
+		<real>334974684.63903099</real>
+		<string>{8011, 1222}</string>
+		<string>{6592, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6694,9 +6694,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334974557.60919797</real>
-		<string>{221, 1347}</string>
-		<string>{848, 0}</string>
+		<real>334974684.63950503</real>
+		<string>{8011, 1222}</string>
+		<string>{6592, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>

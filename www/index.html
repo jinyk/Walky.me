@@ -123,7 +123,7 @@
             
             directionsRequest = {
                 origin: origin,
-                destination: strDestination,
+                destination: strDestination + ', New York, NY',
                 travelMode: google.maps.TravelMode.WALKING
             }
             
@@ -135,6 +135,10 @@
             })
     
             directionsDisplay.setMap(directionsMap)
+                    directionsDisplay.setMap(directionsMap)
+                    directionsMap.fitBounds(result.routes[0].bounds)
+                }
+            })
         }
 
         function nearestWalkys() {
@@ -150,7 +154,7 @@
         }
 
         function walkyRoute() {
-            updateRoute("200 East 52nd St, New York, NY", "194 West 53rd St, New York, NY")
+            updateRoute("Current Location", "194 West 53rd St, New York, NY")
         }
         
     </script>
@@ -173,20 +177,20 @@
   
   <div data-role="page" id="walky_route" data-theme="a">
       <div data-role="header" data-position="fixed">
-        <div data-role="fieldcontain">
-            <label for="start" style="display: inline-block; width: 50px;">
-                Start
-            </label>
-            <input id="input_start" name="start" value="Current Location"><br>
-            <label for="end" style="display: inline-block; width: 50px;">
-                End
-            </label>
-            <input id="input_end" name="end">
+        <div data-role="fieldcontain" style="margin: 0; padding: 0">
+            <div style="display: inline-block">
+                <label for="start">Start</label><br>
+                <input id="input_start" name="start" value="Current Location" style="width: 125px">
+            </div>
+            <div style="display: inline-block">
+                <label for="end">End</label><br>
+                <input id="input_end" name="end" style="width: 125px">
+            </div>
             <input type="button" value="Go" onClick="updateRoute($('#input_start').val(), $('#input_end').val())">
         </div>
       </div>
       <div data-role="content" style="padding: 0; margin: 0;">
-          <div id="map_canvas_route" style="height: 300px; width: 320px;"></div>
+          <div id="map_canvas_route" style="height: 362px; width: 320px;"></div>
       </div>
       
       <div data-role="footer" data-position="fixed">
