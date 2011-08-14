@@ -11,23 +11,24 @@
 	-->
 	<!-- If your application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
     <style>
-        #search .ui-icon {
-            background-image: url(images/06-magnify.png);
+        #search .ui-icon, #direction .ui-icon {
             background-position: 50% 50%;
             background-repeat: no-repeat;
-            background-size: 16px 16px;
+            background-size: 22px 22px;
+            width: 45px!important;
+            height: 24px!important;
+            margin-left: -24px !important;
+            box-shadow: none!important;
+            -moz-box-shadow: none!important;
+            -webkit-box-shadow: none!important;
+            -webkit-border-radius: none !important;
+            border-radius: none !important;
+        }
+        #search .ui-icon {
+            background-image: url(images/103-map.png);
         }
         #direction .ui-icon {
-            background-image: url(images/103-map.png);
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: 16px 16px;
-        }
-        #location .ui-icon {
-            background-image: url(images/193-location-arrow.png);
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: 16px 16px;
+            background-image: url(images/04-squiggle.png);
         }
     </style>
 	<script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
@@ -127,12 +128,12 @@
             }
             
             directionsService.route(directionsRequest, function(result, status) {
-                                    if (status == google.maps.DirectionsStatus.OK) {
-                                    directionsDisplay.setDirections(result);
-                                    directionsMap.fitBounds(result.routes[0].bounds)
-                                    }
-                                    })
-            
+                if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(result);
+                    directionsMap.fitBounds(result.routes[0].bounds)
+                }
+            })
+    
             directionsDisplay.setMap(directionsMap)
         }
 
