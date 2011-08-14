@@ -141,21 +141,24 @@
             var nearestDistance = 1000
             
             $.each(places, function(i, place) {
-                distance = latLngDistance(latlng, new google.maps.LatLng(place.lat, place.lng))
-                if (distance < nearestDistance) {
-                    nearestPlace = place
-                    nearestDistance = distance
-                }
+              distance = latLngDistance(latlng, new google.maps.LatLng(place.lat, place.lng))
+              if (distance < nearestDistance) {
+                nearestPlace = place
+                nearestDistance = distance
+              }
             })
             return nearestPlace
         }
         
         function drawRouteSteps(steps) {
           $.each(steps, function(i, step) {
-              new google.maps.Polyline({
-                  path: [step.start_location, step.end_location],
-                  map: directionsMap
-              })
+            new google.maps.Polyline({
+              path: [step.start_location, step.end_location],
+              map: directionsMap,
+              strokeColor: '#00c',
+              strokeWeight: 4,
+              strokeOpacity: 0.8
+            })
           })
         }
         
@@ -198,12 +201,6 @@
                   farthestEntry = nearestWalky.entries[0]
               }
               
-//              var marker = new google.maps.Marker({
-//                draggable: false,
-//                map: directionsMap,
-//                position: new google.maps.LatLng(nearestWalky.lat, nearestWalky.lng)
-//              })
-//              
               // Get directions to nearest entry, draw them
               nearestEntryDirRequest = {
                 origin: startPoint,
@@ -220,7 +217,9 @@
                   new google.maps.LatLng(nearestEntry.lat, nearestEntry.lng),
                   new google.maps.LatLng(farthestEntry.lat, farthestEntry.lng)
                 ],
-                strokeColor: '#55ff55',
+                strokeColor: '#0c0',
+                strokeWeight: 4,
+                strokeOpacity: 0.8,
                 map: directionsMap
               })
               
