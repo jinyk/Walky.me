@@ -82,15 +82,21 @@
             })
             places = $.getJSON('places.json', null, function(places) {
                $.each(places, function(i, place) {
-                      new google.maps.Marker({
-                                             position: new google.maps.LatLng(place.lat, place.lng),
-                                             map: map
-                                             })
-                      new google.maps.Marker({
-                                             position: new google.maps.LatLng(place.lat, place.lng),
-                                             map: directionsMap
-                                             })
-                      })
+                    var infowindow = new google.maps.InfoWindow({
+                        content: "<div style='color:black'>" + place.address + "<br>type: " + place.space_type + "</div>"
+                    })
+                    var curmarker = new google.maps.Marker({
+                         position: new google.maps.LatLng(place.lat, place.lng),
+                         map: map
+                    })
+                    google.maps.event.addListener(curmarker, 'click', function() {
+                        infowindow.open(map, curmarker);
+                    })
+                    new google.maps.Marker({
+                         position: new google.maps.LatLng(place.lat, place.lng),
+                         map: directionsMap
+                    })
+                  })
                })
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
