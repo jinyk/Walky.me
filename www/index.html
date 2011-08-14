@@ -60,11 +60,11 @@
             type: 'poly'
         }
 
-        var loc_lat = 40.758359
-        var loc_lng = -73.973436
-        var loc_accuracy = 85.5
-        var loc_time = new Date()
-        var places
+        // 40.758359,-73.973436
+        var loc_lat = 40.758359;
+        var loc_lng = -73.973436;
+        var loc_accuracy = 85.5;
+        var loc_time = new Date();
 
         function onBodyLoad() {
             document.addEventListener("deviceready",onDeviceReady,false);
@@ -81,19 +81,30 @@
                 center: new google.maps.LatLng(loc_lat, loc_lng),
                 zoom: defaultMapZoom
             })
+            
             $.getJSON('places.json', null, function(jsonPlaces) {
                 places = jsonPlaces
                 $.each(jsonPlaces, function(i, place) {
-                   new google.maps.Marker({
+                   var infowindow = new google.maps.InfoWindow({
+                     content: "<div style='color:black'>" + place.address + "<br>type: " + place.space_type + "</div>"
+                   })
+                   var curmarker = new google.maps.Marker({
                      position: new google.maps.LatLng(place.lat, place.lng),
                      map: map
                    })
-                   new google.maps.Marker({
+                    google.maps.event.addListener(curmarker, 'click', function() {
+                        infowindow.open(map, curmarker);
+                    })
+                   var curmarker = new google.maps.Marker({
                      position: new google.maps.LatLng(place.lat, place.lng),
                      map: directionsMap
                    })
+                    google.maps.event.addListener(curmarker, 'click', function() {
+                        infowindow.open(map, curmarker);
+                    })
                 })
             })
+            
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
             $('#walky_route').live('pagebeforeshow',function(event){
@@ -101,6 +112,7 @@
             })
             $('#walky_route').live('pagecreate',function(event){
                 updateRoute("Current Location", "1 w 54th")
+//                updateRoute("Current Location", "1697 Broadway")
             })
             $('#nearest_walkys').live('pagebeforeshow',function(event){
                 nearestWalkys()
@@ -302,7 +314,7 @@
         }
 
         function nearestWalkys() {
-            navigator.geolocation.getCurrentPosition(onSuccess, onError)
+            //navigator.geolocation.getCurrentPosition(onSuccess, onError)
             var marker = new google.maps.Marker({
                 draggable: false,
                 icon: image,
