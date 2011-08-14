@@ -1392,7 +1392,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>334974635.75223202</real>
+		<real>334974720.61284</real>
 		<string>{0, 374}</string>
 		<dict>
 			<key>$class</key>
@@ -1723,9 +1723,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334974684.63903099</real>
-		<string>{8011, 1222}</string>
-		<string>{6592, 0}</string>
+		<real>334975026.87785298</real>
+		<string>{4842, 1043}</string>
+		<string>{5488, 114}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2759,7 +2759,7 @@
 				<integer>235</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>334974552.60733598</real>
+			<real>334974705.02197897</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -2770,7 +2770,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 8:29 PM</string>
+		<string>Today at 8:31 PM</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -6694,9 +6694,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>334974684.63950503</real>
-		<string>{8011, 1222}</string>
-		<string>{6592, 0}</string>
+		<real>334975026.878317</real>
+		<string>{4842, 1043}</string>
+		<string>{5488, 114}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
