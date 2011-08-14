@@ -60,10 +60,11 @@
             type: 'poly'
         }
 
-        var loc_lat = 40.739165;
-        var loc_lng = -73.989653;
-        var loc_accuracy = 85.5;
-        var loc_time = new Date();
+        var loc_lat = 40.758359
+        var loc_lng = -73.973436
+        var loc_accuracy = 85.5
+        var loc_time = new Date()
+        var places
 
         function onBodyLoad() {
             document.addEventListener("deviceready",onDeviceReady,false);
@@ -80,25 +81,26 @@
                 center: new google.maps.LatLng(loc_lat, loc_lng),
                 zoom: defaultMapZoom
             })
-            places = $.getJSON('places.json', null, function(places) {
-               $.each(places, function(i, place) {
-                      new google.maps.Marker({
-                                             position: new google.maps.LatLng(place.lat, place.lng),
-                                             map: map
-                                             })
-                      new google.maps.Marker({
-                                             position: new google.maps.LatLng(place.lat, place.lng),
-                                             map: directionsMap
-                                             })
-                      })
-               })
+            $.getJSON('places.json', null, function(jsonPlaces) {
+                places = jsonPlaces
+                $.each(jsonPlaces, function(i, place) {
+                   new google.maps.Marker({
+                     position: new google.maps.LatLng(place.lat, place.lng),
+                     map: map
+                   })
+                   new google.maps.Marker({
+                     position: new google.maps.LatLng(place.lat, place.lng),
+                     map: directionsMap
+                   })
+                })
+            })
             directionsService = new google.maps.DirectionsService()
             directionsDisplay = new google.maps.DirectionsRenderer({draggable: true})
             $('#walky_route').live('pagebeforeshow',function(event){
                 walkyRoute()
             })
             $('#walky_route').live('pagecreate',function(event){
-                updateRoute("Current Location", "194 West 53rd St, New York, NY")
+                updateRoute("Current Location", "1 w 54th")
             })
             $('#nearest_walkys').live('pagebeforeshow',function(event){
                 nearestWalkys()
@@ -117,27 +119,186 @@
 //            alert('code: '    + error.code    + '\n' +
 //                  'message: ' + error.message + '\n');
         }
-
+        
+        function latLngDistance(pointA, pointB) {
+            return Math.abs(pointA.lat() - pointB.lat()) + Math.abs(pointB.lng() - pointB.lng())
+        }
+        
+        function findNearestWalky(places, latlng) {
+            var nearestPlace = null
+            var nearestDistance = 1000
+            
+            $.each(places, function(i, place) {
+                distance = latLngDistance(latlng, new google.maps.LatLng(place.lat, place.lng))
+                if (distance < nearestDistance) {
+                    nearestPlace = place
+                    nearestDistance = distance
+                }
+            })
+            return nearestPlace
+        }
+        
+        function drawRouteSteps(steps) {
+          $.each(steps, function(i, step) {
+              new google.maps.Polyline({
+                  path: [step.start_location, step.end_location],
+                  map: directionsMap
+              })
+          })
+        }
+        
+        function routeThroughWalky(start, end) {
+          directionsRequest = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode.WALKING
+          }
+          
+          directionsService.route(directionsRequest, function(result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {                
+              var bounds = result.routes[0].bounds
+              
+              var placesInBounds = []
+              $.each(places, function(i, place) {
+                if (bounds.contains(new google.maps.LatLng(place.lat, place.lng))) {
+                  placesInBounds.push(place)
+                }
+              })
+                
+              // No more walkys, draw to end
+              if (placesInBounds.length == 0) {
+                drawRouteSteps(result.routes[0].legs[0].steps)
+                return
+              }
+                    
+              // Route through nearest walky
+              startPoint = result.routes[0].legs[0].start_location
+              endPoint = result.routes[0].legs[0].end_location                    
+              var nearestWalky = findNearestWalky(placesInBounds, startPoint)
+              
+              var entry0 = new google.maps.LatLng(nearestWalky.entries[0].lat, nearestWalky.entries[0].lng)
+              var entry1 = new google.maps.LatLng(nearestWalky.entries[1].lat, nearestWalky.entries[1].lng)
+              if (latLngDistance(entry0, startPoint) < latLngDistance(entry1, startPoint)) {
+                  nearestEntry = nearestWalky.entries[0]
+                  farthestEntry = nearestWalky.entries[1]
+              } else {
+                  nearestEntry = nearestWalky.entries[1]
+                  farthestEntry = nearestWalky.entries[0]
+              }
+              
+//              var marker = new google.maps.Marker({
+//                draggable: false,
+//                map: directionsMap,
+//                position: new google.maps.LatLng(nearestWalky.lat, nearestWalky.lng)
+//              })
+//              
+              // Get directions to nearest entry, draw them
+              nearestEntryDirRequest = {
+                origin: startPoint,
+                destination: new google.maps.LatLng(nearestEntry.lat, nearestEntry.lng),
+                travelMode: google.maps.TravelMode.WALKING
+              }
+              directionsService.route(nearestEntryDirRequest, function(result, status) {
+                drawRouteSteps(result.routes[0].legs[0].steps)
+              })
+              
+              // Draw line through walky
+              new google.maps.Polyline({
+                path: [
+                  new google.maps.LatLng(nearestEntry.lat, nearestEntry.lng),
+                  new google.maps.LatLng(farthestEntry.lat, farthestEntry.lng)
+                ],
+                strokeColor: '#55ff55',
+                map: directionsMap
+              })
+              
+              routeThroughWalky(new google.maps.LatLng(farthestEntry.lat, farthestEntry.lng), endPoint)
+            }
+          })
+        }
+        
         function updateRoute(strOrigin, strDestination) {
             if (strOrigin == 'Current Location')
                 origin = new google.maps.LatLng(loc_lat, loc_lng)
             else
                 origin = strOrigin
             
-            directionsRequest = {
-                origin: origin,
-                destination: strDestination + ', New York, NY',
-                travelMode: google.maps.TravelMode.WALKING
-            }
+            routeThroughWalky(origin, strDestination + ', New York, NY')
             
-            directionsService.route(directionsRequest, function(result, status) {
-                if (status == google.maps.DirectionsStatus.OK) {
-                    directionsDisplay.setDirections(result);
-                    directionsMap.fitBounds(result.routes[0].bounds)
-                }
-            })
-    
-            directionsDisplay.setMap(directionsMap)
+//            directionsRequest = {
+//                origin: origin,
+//                destination: strDestination + ', New York, NY',
+//                travelMode: google.maps.TravelMode.WALKING
+//            }
+//            directionsService.route(directionsRequest, function(result, status) {
+//                if (status == google.maps.DirectionsStatus.OK) {                
+//                    var bounds = result.routes[0].bounds
+//                    
+//                    var placesInBounds = []
+//                    $.each(places, function(i, place) {
+//                        if (bounds.contains(new google.maps.LatLng(place.lat, place.lng))) {
+//                            placesInBounds.push(place)
+//                        }
+//                    })
+//                    
+//                    // Find nearest walky entry to origin
+//                    var nearestEntry
+//                    var farthestEntry
+//                    startPoint = result.routes[0].legs[0].start_location
+//                    endPoint = result.routes[0].legs[0].end_location                    
+//                    nearestPlace = findNearestWalky(placesInBounds, startPoint)
+//                    
+//                    var entry0 = new google.maps.LatLng(nearestPlace.entries[0].lat, nearestPlace.entries[0].lng)
+//                    var entry1 = new google.maps.LatLng(nearestPlace.entries[1].lat, nearestPlace.entries[1].lng)
+//                    if (latLngDistance(entry0, startPoint) < latLngDistance(entry1, startPoint)) {
+//                        nearestEntry = nearestPlace.entries[0]
+//                        farthestEntry = nearestPlace.entries[1]
+//                    } else {
+//                        nearestEntry = nearestPlace.entries[1]
+//                        farthestEntry = nearestPlace.entries[0]
+//                    }
+//                    
+//                    var marker = new google.maps.Marker({
+//                        draggable: false,
+//                        map: directionsMap,
+//                        position: new google.maps.LatLng(nearestPlace.lat, nearestPlace.lng)
+//                    })
+//                    
+//                    // Get directions to nearest entry, draw them
+//                    nearestEntryDirRequest = {
+//                        origin: startPoint,
+//                        destination: new google.maps.LatLng(nearestEntry.lat, nearestEntry.lng),
+//                        travelMode: google.maps.TravelMode.WALKING
+//                    }
+//                    directionsService.route(nearestEntryDirRequest, function(result, status) {
+//                      drawRouteSteps(result.routes[0].legs[0].steps)
+//                    })
+//                    
+//                    // Draw line through walky
+//                    new google.maps.Polyline({
+//                        path: [
+//                            new google.maps.LatLng(nearestEntry.lat, nearestEntry.lng),
+//                            new google.maps.LatLng(farthestEntry.lat, farthestEntry.lng)
+//                        ],
+//                        map: directionsMap
+//                    })
+//                    
+//                    // Get directions from farthest entry to destination
+//                    farthestEntryDirRequest = {
+//                        origin: new google.maps.LatLng(farthestEntry.lat, farthestEntry.lng),
+//                        destination: endPoint,
+//                        travelMode: google.maps.TravelMode.WALKING
+//                    }
+//                    directionsService.route(farthestEntryDirRequest, function(result, status) {
+//                        drawRouteSteps(result.routes[0].legs[0].steps)
+//                    })
+//                    
+////                    directionsDisplay.setDirections(result);
+//                    directionsMap.fitBounds(bounds)
+//                }
+//            })
+//    
+////            directionsDisplay.setMap(directionsMap)
         }
 
         function nearestWalkys() {
